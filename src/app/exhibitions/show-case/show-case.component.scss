@@ -1,0 +1,111 @@
+main {
+  background-color: var(--header-blue);
+
+  section {
+    color: var(--header-blue);
+    background-color: red;
+    .carousel-container {
+      
+      background-color: lightblue;
+      width: 100%;
+      max-width: 750px;
+      padding: 0px var(--rem-ms);
+      font-size: 0.9rem;
+
+      .exhibition-title {
+        text-transform: uppercase;
+        background-color: var(--exhibition-background);
+        margin: 7px 0px;
+        border-radius: 3px;
+        padding: var(--rem-medium)
+      }
+
+      .slide-data-container-container {
+        height: 100%;
+
+        .slide-data-container {
+          .caption-price-copyright {
+            padding: 2px 0px 2px 5px;
+            background-color: lightgray;
+            opacity: 0.7;
+
+            .caption, .price, .copyright {
+              color: black;
+              font-size: var(--rem-ms);
+            }
+          }
+        }
+      }
+      .date {
+        margin:  var(--rem-ms) 0;
+      }
+      .artist-name {
+        @extend .date
+      }
+      .description-content {
+        @extend .date
+      }
+      .visit {
+        @extend .date
+      }
+      .contact {
+        // padding: 0 0 var(--rem-ms) 0px;
+      }
+    }
+  }
+}
+
+
+hr {
+  padding: 0px;
+  margin: 0px;
+}
+
+// .slide-data-container-container {
+//   height: 100%;
+
+//   // border: 10px solid red;
+//   .slide-data-container {
+
+//     .caption-price-copyright {
+//       padding: 2px 0px 2px 5px;
+//       background-color: lightgray;
+//       opacity: 0.7;
+
+//       .caption,
+//       .price,
+//       .copyright {
+//         color: black;
+//         font-size: var(--rem-ms);
+//       }
+//     }
+//   }
+// }
+
+/* ********************* */
+@media (min-width: 320px) and (max-width: 480px) {}
+
+@media (min-width: 481px) and (max-width: 767px) {}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  // .additional-photos-container {
+  //   background-color: #ccc;
+  //   margin: 7px;
+  //   padding: 15px;
+  //   border-radius: 6px;
+  //   display: grid;
+  //   grid-template-columns: repeat(12, 1fr);
+  //   grid-template-rows: auto;
+  //   grid-column-gap: 30px;
+  //   grid-template-areas:
+
+  //     "a a a a a b b b b b b b"
+  //     "a a a a a b b b b b b b"
+  //     "c c c c c c c d d d d d"
+  // }
+
+  @media (min-width: 1025px) and (max-width: 1280px) {}
+
+  @media (min-width: 1281px) {}
+}

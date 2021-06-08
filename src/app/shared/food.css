@@ -1,0 +1,138 @@
+section {
+  background-color: var(--header-blue)
+}
+
+.banner {
+  margin-top: 100px;
+  left: 30px;
+  max-width: 70vw;
+  position: absolute;
+  background-color: #fff;
+  /* border: 5px solid red; */
+  padding: 15px;
+  opacity: 0.8;
+}
+
+.banner-header {
+  color: var(--text-color-orange);
+  font-size: 0.8rem;
+  
+  padding: 5px;
+  margin: 0px;
+}
+
+.banner-course-name {
+  color: var(--header-blue);
+  font-weight: 600;
+  font-size: 1rem;
+  
+  padding: 5px;
+  margin: 0px;
+}
+
+.banner-text-content {
+  color: var(--header-blue);
+  text-transform: uppercase;
+  font-size: .8rem;
+  
+}
+
+/* ========== */
+
+.course-container {
+  background-color: var(--text-color-orange);
+}
+
+.course {
+  /* padding: 15px 15px; */
+  background-color: var(--header-blue);
+}
+
+.course-name {
+  color: white;
+  
+  font-weight: 400;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.course-item-list {
+  padding: 0;
+  margin: 0;
+}
+
+.course-item-list li {
+  padding: 2px;
+  text-transform: uppercase;
+  color: var(--text-color-orange);
+  /* font-weight: 800; */
+  
+}
+
+.course-item-name {
+  padding-right: 7px
+}
+
+.course-item-list li div span {}
+
+.hr {
+  margin: 10px 40px;
+}
+
+.course {
+  /* margin: 5px 5px 5px 5px; */
+  border: 5px solid var(--text-color-orange);
+  padding: 30px;
+  min-width: 250px;
+}
+
+.courses-container {
+  padding: 5px;
+  background-color: var(--text-color-orange);
+}
+
+@media (min-width: 40rem) {
+  /* .course {
+    padding: 15px;
+  } */
+
+  .banner-course-name {
+    padding: 25px;
+    font-size: 2rem;
+    
+    padding: 5px;
+    margin: 0px;
+  }
+}
+
+/* larger than 60 rem */
+@media (min-width: 60rem) {
+  .banner-header {
+    font-size: 1rem;
+  }
+
+  /* .lunch {
+    font-size: 2rem;
+    
+    padding: 5px;
+    margin: 0px;
+  }
+   */
+  .banner-text-content {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    ;
+    
+  }
+  /* .course-container {
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 5rem, 2rem;
+  } */
+
+  /* .course-tostis {
+    min-width: 250px;
+    margin-right: 5px;
+  } */
+}

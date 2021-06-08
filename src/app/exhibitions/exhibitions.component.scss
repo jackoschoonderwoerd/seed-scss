@@ -1,0 +1,85 @@
+.background-image {
+  background-image: url('./../../assets/exhibitions-assets/veertig-jaar-bimhuis/images/40-jaar-bimhuis-2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0% 40%;
+  height: 70vh;
+  // padding: var(--rem-padding);
+  margin: var(--rem-medium);
+}
+
+.courses-container {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (min-width: 481px) and (max-width: 767px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  @media (min-width: 1281px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  .pill-content {
+    border-radius: 3px;
+    -webkit-box-shadow: var(--default-box-shadow);
+    /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow: var(--default-box-shadow);
+    /* Firefox 3.5 - 3.6 */
+    box-shadow: var(--default-box-shadow);
+    /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+    color: var(--text-color-orange);
+    background-color: var(--header-blue);
+    padding: var(--rem-m);
+    margin: var(--rem-m);
+    font-weight: 400;
+    
+
+    .exposition-title {
+      text-transform: uppercase;
+      margin: 0px 0px 5px 0px;
+    }
+
+    .artist-names-container {
+      .artist-names-list {
+        .artist-names-list {
+          .artist-names-list-item {
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    /* Device = Most of the Smartphones Mobiles (Portrait) Screen = 320px to 479px */
+  }
+
+  @media (min-width: 481px) and (max-width: 767px) {
+    /* Device = Low Resolution Tablets, Mobiles (Landscape) Screen = 481px to 767px*/
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    /* Device = Tablets, Ipads (portrait) Screen = 768px to 1024px */
+  }
+
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    /* Device = Laptops, Desktops Screen = 1025px to 1280px */
+  }
+
+  @media (min-width: 1281px) {
+    /* Device = Desktops Screen = 1281px to higher resolution desktops */
+  }
+}

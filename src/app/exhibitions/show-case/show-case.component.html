@@ -1,0 +1,79 @@
+<main #main id="main">
+  <section fxLayout="column" fxLayoutAlign="center center">
+    <div
+      class="carousel-container">
+      <div
+        class="exhibition-title"
+        #exhibitionTitle>
+        {{exhibition.title}}
+
+      </div>
+      <mat-carousel
+        
+      timings="250ms ease-in"
+      interval="5000"
+      color="primary"
+      maxWidth="auto"
+      maintainAspectRatio="true"
+      slides="10"
+      [loop]="true"
+      [hideArrows]="hideArrows"
+      [hideIndicators]="true"
+      [useKeyboard]="true"
+      [useMouseWheel]="false"
+      orientation="ltr"
+      [proportion]="aspectRatio">
+
+      <mat-carousel-slide
+      *ngFor="let image of images; let i = index"
+      [image]="image.image"
+      [hideOverlay]="true">
+      <div class="slide-data-container-container" fxLayout="column" fxLayoutAlign="end">
+        <div class="slide-data-container" fxLayout fxLayoutAlign="end">
+          <div *ngIf="image.caption || image.price || image.copyright" class="caption-price-copyright" fxLayout>
+            <div *ngIf="image.caption" class="caption">{{ image.caption }}</div>
+            <div *ngIf="image.price" class="price">{{image.price | currency:"EUR"}}</div>
+            <div *ngIf="image.copyright" class="copyright">&#169; {{image.copyright}}</div>
+          </div>
+        </div>
+      </div>
+      </mat-carousel-slide>
+
+      </mat-carousel>
+      <!-- </div> -->
+      <div class="description">
+        <div class="date">
+          {{exhibition.date}}
+        </div>
+        <div *ngIf="exhibition.artistNames.length > 0" class="artist-name" fxLayoutAlign="end">
+          
+          <ul>
+            <li *ngFor="let artistName of exhibition.artistNames" fxLayout fxLayoutAlign="end">
+              {{artistName | uppercase}}
+            </li>
+          </ul>
+        </div>
+        <div class="description-content" [innerHTML]="htmlContent"></div>
+        <div *ngIf="exhibition.websites.length > 0" class="visit">
+          
+          <span>VISIT:</span>
+          <ul>
+            <li *ngFor="let website of exhibition.websites">
+              <a href="{{website}}" target="_blank">{{website}}</a></li>
+          </ul>
+        </div>
+        <div *ngIf="exhibition.emailAddresses.length > 0" class="visit">
+          
+          <span>CONTACT:</span>
+          <ul>
+            <li *ngFor="let emailAddress of exhibition.emailAddresses">
+              <a href="mailto:{{emailAddress}}">{{emailAddress}}</a>
+            </li>
+          </ul>
+        </div>
+        <!-- <button (click)="main.scrolltop = 0">SCROLL TO TOP</button> -->
+        <!-- <button (click)="onScrollToTop(exhibitionTitle)">MAIN</button> -->
+      </div>
+    </div>
+  </section>
+</main>

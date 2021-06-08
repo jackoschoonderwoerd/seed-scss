@@ -1,0 +1,24 @@
+
+  <mat-toolbar fxLayout fxLayoutAlign="space-between">
+    <div class="toolbar-left" fxLayout fxLayoutAlign="center center">
+      <!-- <mat-icon fxHide.gt-sm class="menu-icon" (click)="onOpenSidenav()">menu</mat-icon> -->
+      <fa-icon (click)="onOpenSidenav()" fxHide.gt-sm [icon]="faBars"></fa-icon>
+    </div>
+
+    <!-- <div class="spacer" fxFlex></div> -->
+
+    <div class="toolbar-right" fxLayout>
+
+      <div class="list-container" fxLayout fxLayoutAlign="center center" fxHide.lt-md>
+        <ul fxLayout fxLayoutGap="15px">
+          <li><a routerLinkActive="active-link" routerLink="/home">HOME</a></li>
+          <li><a routerLinkActive="active-link" routerLink="/login">LOGIN</a></li>
+          <li><a routerLinkActive="active-link" routerLink="/signup">SIGNUP</a></li>
+          <li><a routerLinkActive="active-link" routerLink="/exhibitions">EXHIBITIONS</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </mat-toolbar>
+  <!-- <hr> -->
+
